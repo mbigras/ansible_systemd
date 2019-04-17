@@ -1,0 +1,23 @@
+---
+- hosts: all
+  tasks:
+    - name: run systemctl stop foo*.service --user
+      shell: systemctl stop foo*.service --user
+
+    - name: run systemctl stop foo.service --user
+      shell: systemctl stop foo.service --user
+      ignore_errors: yes
+
+    - name: run systemctl stop foo*.service --user
+      systemd:
+        name: foo*.service
+        scope: user
+        state: stopped
+      ignore_errors: yes
+
+    - name: run systemctl stop foo.service --user
+      systemd:
+        name: foo.service
+        scope: user
+        state: stopped
+      ignore_errors: yes
