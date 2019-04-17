@@ -1,4 +1,22 @@
-README.md
+# ansible_systemd
+
+> Bug report for when systemd ansible module is not silently ignoring units when using a glob pattern
+
+## Links
+
+* https://www.freedesktop.org/software/systemd/man/systemctl.html
+
+## Ansible version
+
+```
+ansible --version
+ansible 2.7.10
+  config file = /Users/max/code/ansible_systemd/ansible.cfg
+  configured module search path = ['/Users/max/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/local/Cellar/ansible/2.7.10/libexec/lib/python3.7/site-packages/ansible
+  executable location = /usr/local/bin/ansible
+  python version = 3.7.3 (default, Mar 27 2019, 09:23:15) [Clang 10.0.1 (clang-1001.0.46.3)]
+```
 
 ## Setup
 
