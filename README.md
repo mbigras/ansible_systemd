@@ -3,6 +3,11 @@ README.md
 ## Setup
 
 ```
+git clone https://github.com/mbigras/ansible_systemd
+cd ansible_systemd
+vagrant up
+ansible all -m ping
+```
 
 ## Run with vagrant
 
