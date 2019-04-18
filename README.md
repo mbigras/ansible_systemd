@@ -61,35 +61,6 @@ TASK [run systemctl stop foo*.service --user] **********************************
 changed: [192.168.33.10]
 
 TASK [run systemctl stop foo.service --user] *******************************************
-fatal: [192.168.33.10]: FAILED! => {"changed": true, "cmd": "systemctl stop foo.service --user", "delta": "0:00:00.003820", "end": "2019-04-17 23:25:33.892407", "msg": "non-zero return code", "rc": 5, "start": "2019-04-17 23:25:33.888587", "stderr": "Failed to stop foo.service: Unit foo.service not loaded.", "stderr_lines": ["Failed to stop foo.service: Unit foo.service not loaded."], "stdout": "", "stdout_lines": []}
-...ignoring
-
-TASK [run systemctl stop foo*.service --user] ******************************************
-fatal: [192.168.33.10]: FAILED! => {"changed": false, "msg": "Could not find the requested service foo*.service: host"}
-...ignoring
-
-TASK [run systemctl stop foo.service --user] *******************************************
-fatal: [192.168.33.10]: FAILED! => {"changed": false, "msg": "Could not find the requested service foo.service: host"}
-...ignoring
-
-PLAY RECAP *****************************************************************************
-192.168.33.10              : ok=5    changed=2    unreachable=0    failed=0
-
-$
-$ ls
-README.md	ansible.cfg	playbook.retry
-Vagrantfile	inventory.ini	playbook.yml
-$ ansible-playbook playbook.yml
-
-PLAY [all] *****************************************************************************
-
-TASK [Gathering Facts] *****************************************************************
-ok: [192.168.33.10]
-
-TASK [run systemctl stop foo*.service --user] ******************************************
-changed: [192.168.33.10]
-
-TASK [run systemctl stop foo.service --user] *******************************************
 fatal: [192.168.33.10]: FAILED! => {"changed": true, "cmd": "systemctl stop foo.service --user", "delta": "0:00:00.003811", "end": "2019-04-17 23:33:27.925116", "msg": "non-zero return code", "rc": 5, "start": "2019-04-17 23:33:27.921305", "stderr": "Failed to stop foo.service: Unit foo.service not loaded.", "stderr_lines": ["Failed to stop foo.service: Unit foo.service not loaded."], "stdout": "", "stdout_lines": []}
 ...ignoring
 
